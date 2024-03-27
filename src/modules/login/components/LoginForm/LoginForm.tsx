@@ -44,7 +44,7 @@ const LoginForm: React.FC = () => {
       <Title>Login</Title>
       <Input label="email" type="email" onChange={handleEmailChange} />
       <Input label="password" type="password" onChange={handlePasswordChange} />
-      <SubmitButton type="submit" />
+      <SubmitButton type="submit" aria-label="submit-button" />
       <ErrorMessage>{error ? "Wrong credentials" : ""}</ErrorMessage>
     </Container>
   );
