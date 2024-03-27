@@ -1,3 +1,7 @@
 .submitButton {
   background-color: aqua;
 }
+
+.error {
+  color: red;
+}

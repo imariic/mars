@@ -2,19 +2,25 @@ import React, { useState } from "react";
 import Input from "../../../components/Input/Input";
 import styles from "./Login.module.css";
 import { login } from "../../../utils";
+import { useNavigate } from "react-router-dom";
+import { ROUTES } from "../../../constants";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [error, setError] = useState(false);
+  const navigate = useNavigate();
 
   const handleLogin = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     const isValid = email === "ivan@gmail.com" && password === "ivan";
+    setError(!isValid);
 
     if (!isValid) return;
 
     login();
+    navigate(ROUTES.POSTS);
   };
 
   const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -31,6 +37,7 @@ const Login = () => {
       <Input label="email" type="email" onChange={handleEmailChange} />
       <Input label="password" type="password" onChange={handlePasswordChange} />
       <input className={styles.submitButton} type="submit" />
+      {error ? <p className={styles.error}>Wrong credentials</p> : null}
     </form>
   );
 };
