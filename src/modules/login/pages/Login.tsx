@@ -1,17 +1,18 @@
 import React, { useState } from "react";
 import Input from "../../../components/Input/Input";
 import styles from "./Login.module.css";
-import { login } from "../../../utils";
 import { useNavigate } from "react-router-dom";
 import { ROUTES } from "../../../constants";
+import useLocalStorage from "../../../hooks";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(false);
   const navigate = useNavigate();
+  const [, login] = useLocalStorage("auth", false);
 
-  const handleLogin = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleLogin = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     const isValid = email === "ivan@gmail.com" && password === "ivan";
@@ -19,7 +20,7 @@ const Login = () => {
 
     if (!isValid) return;
 
-    login();
+    await login(true);
     navigate(ROUTES.POSTS);
   };
 
