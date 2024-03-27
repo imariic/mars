@@ -1,15 +1,15 @@
-import { usePosts } from "../hooks";
-import PostItem from "../components/PostItem";
 import {
   PostsContainer,
   LoadMoreButton,
   Container,
   Search,
-} from "./Posts.style";
+} from "./Posts.styles";
 import { useState } from "react";
 import { useDebounce } from "hooks";
 import { filterPosts } from "modules/post/helpers";
 import withDisplayName from "hoc";
+import { usePosts } from "modules/post/hooks";
+import PostItem from "modules/post/components/PostItem";
 
 const Posts: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState("");

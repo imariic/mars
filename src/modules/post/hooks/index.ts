@@ -6,7 +6,7 @@ import {
   useState,
 } from "react";
 import { Post } from "interfaces";
-import { getPosts } from "../services";
+import { getPostById, getPosts } from "../services";
 import { UserContext } from "modules/user";
 
 const limit = 10;

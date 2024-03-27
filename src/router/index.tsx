@@ -1,5 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
-import { LoginPage, PostsPage } from "../modules";
+import { LoginPage, PostDetailsPage, PostsPage } from "../modules";
 import { AppRoutes } from "constants/enums";
 import { ProtectedRoute } from "components";
 
@@ -13,6 +13,14 @@ const router = createBrowserRouter([
     element: (
       <ProtectedRoute>
         <PostsPage />
+      </ProtectedRoute>
+    ),
+  },
+  {
+    path: AppRoutes.POST_DETAILS,
+    element: (
+      <ProtectedRoute>
+        <PostDetailsPage />
       </ProtectedRoute>
     ),
   },

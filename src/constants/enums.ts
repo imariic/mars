@@ -1,5 +1,5 @@
 export enum AppRoutes {
   HOME = "/",
   POSTS = "/app",
-  POST_DETAILS = "/post/id",
+  POST_DETAILS = "/post/:id",
 }
