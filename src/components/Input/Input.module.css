@@ -1,0 +1,8 @@
+.label {
+  text-transform: capitalize;
+  margin-right: 4px;
+}
+
+.input {
+  margin: 8px 0;
+}
