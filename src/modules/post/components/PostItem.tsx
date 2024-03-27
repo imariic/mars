@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { Post } from "../../../interfaces";
 import { UserContext } from "../../user";
 import { useComments } from "../../comment/hooks";
-import styles from "./PostItem.module.css";
+import { Container } from "./PostItem.styles";
 
 interface PostItemProps {
   post: Post;
@@ -15,7 +15,7 @@ const PostItem: React.FC<PostItemProps> = ({ post }) => {
   const user = users.find((user) => user.id === post.id);
 
   return (
-    <div className={styles.container}>
+    <Container>
       <h3>
         Title: {post.title} #{post.id}
       </h3>
@@ -26,7 +26,7 @@ const PostItem: React.FC<PostItemProps> = ({ post }) => {
           <li>{item.name}</li>
         ))}
       </ul>
-    </div>
+    </Container>
   );
 };
 

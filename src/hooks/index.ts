@@ -8,7 +8,7 @@ const getItemFromLocalStorage = <T>(key: string): T | null => {
       return JSON.parse(item);
     }
   } catch (error) {
-    console.error("Can get the item", error);
+    console.error(`Can't get the item with key: ${key}`, error);
   }
 
   return null;
@@ -18,7 +18,7 @@ const setItemToLocalStorage = <T>(key: string, value: T): void => {
   try {
     localStorage.setItem(key, JSON.stringify(value));
   } catch (e) {
-    console.error("Can get the item from local storage", e);
+    console.error(`Can't set the item with key: ${key}`, e);
   }
 };
 
