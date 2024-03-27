@@ -1,11 +1,8 @@
-import React, { useContext } from "react";
 import { usePosts } from "../hooks";
-import { UserContext } from "../../user";
 import PostItem from "../components/PostItem";
 
 const Posts = () => {
-  const users = useContext(UserContext);
-  const [posts, setPosts, setPage] = usePosts(users);
+  const [posts, setPosts, setPage] = usePosts();
 
   return (
     <div>

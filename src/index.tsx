@@ -5,15 +5,19 @@ import { RouterProvider } from "react-router-dom";
 import reportWebVitals from "./reportWebVitals";
 import router from "./router";
 import { UserProvider } from "./modules";
+import { ThemeProvider } from "styled-components";
+import { theme } from "./constants";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <UserProvider>
-      <RouterProvider router={router} />
-    </UserProvider>
+    <ThemeProvider theme={theme}>
+      <UserProvider>
+        <RouterProvider router={router} />
+      </UserProvider>
+    </ThemeProvider>
   </React.StrictMode>
 );
 

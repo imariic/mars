@@ -1,12 +1,10 @@
 import { Dispatch, SetStateAction, useEffect, useState } from "react";
 import { getPosts } from "../services";
-import { Post, User } from "../../../interfaces";
+import { Post } from "../../../interfaces";
 
 const limit = 10;
 
-export const usePosts = (
-  users: User[]
-): [
+export const usePosts = (): [
   Post[] | undefined,
   Dispatch<SetStateAction<Post[] | undefined>>,
   Dispatch<SetStateAction<number>>
