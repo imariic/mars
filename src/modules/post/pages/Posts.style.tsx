@@ -8,12 +8,14 @@ export const Container = styled.main`
 `;
 
 export const Search = styled(Input)`
+  position: fixed;
   width: 250px;
   height: 50px;
   font-size: 32px;
 `;
 
 export const PostsContainer = styled.section`
+  padding-top: 70px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;

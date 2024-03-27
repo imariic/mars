@@ -8,6 +8,7 @@ import {
 } from "./Posts.style";
 import { useState } from "react";
 import { useDebounce } from "hooks";
+import { filterPosts } from "modules/post/helpers";
 
 const Posts = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -19,9 +20,7 @@ const Posts = () => {
 
   const debouncedSearchQuery = useDebounce(searchQuery);
 
-  const filteredPosts = posts?.filter((post) =>
-    post.name?.toLowerCase().includes(debouncedSearchQuery.toLowerCase())
-  );
+  const filteredPosts = filterPosts(posts, debouncedSearchQuery);
 
   return (
     <Container>
