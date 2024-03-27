@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Input from "../../../components/Input/Input";
 import styles from "./Login.module.css";
 import { useNavigate } from "react-router-dom";
-import { ROUTES } from "../../../constants";
+import { AUTH_LOCAL_STORAGE_KEY, ROUTES } from "../../../constants";
 import useLocalStorage from "../../../hooks";
 
 const Login = () => {
@@ -10,7 +10,7 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const [error, setError] = useState(false);
   const navigate = useNavigate();
-  const [, login] = useLocalStorage("auth", false);
+  const [, login] = useLocalStorage(AUTH_LOCAL_STORAGE_KEY, false);
 
   const handleLogin = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
