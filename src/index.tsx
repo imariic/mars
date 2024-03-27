@@ -6,7 +6,7 @@ import reportWebVitals from "./reportWebVitals";
 import router from "./router";
 import { UserProvider } from "./modules";
 import { ThemeProvider } from "styled-components";
-import { theme } from "./constants";
+import { theme } from "constants/theme";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement

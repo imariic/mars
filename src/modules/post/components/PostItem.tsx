@@ -1,8 +1,8 @@
 import { useContext } from "react";
-import { Post } from "../../../interfaces";
-import { UserContext } from "../../user";
-import { useComments } from "../../comment/hooks";
 import { Container } from "./PostItem.styles";
+import { Post } from "interfaces";
+import { UserContext } from "modules";
+import { useComments } from "modules/comment";
 
 interface PostItemProps {
   post: Post;

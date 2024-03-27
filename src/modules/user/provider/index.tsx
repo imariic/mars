@@ -4,8 +4,8 @@ import React, {
   useEffect,
   useState,
 } from "react";
-import { getUsers } from "../services";
-import { User } from "../../../interfaces";
+import { User } from "interfaces";
+import { getUsers } from "modules";
 
 export const UserContext = createContext<User[]>([]);
 

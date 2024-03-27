@@ -1,6 +1,6 @@
 import { Dispatch, SetStateAction, useEffect, useState } from "react";
+import { Post } from "interfaces";
 import { getPosts } from "../services";
-import { Post } from "../../../interfaces";
 
 const limit = 10;
 

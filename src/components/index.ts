@@ -1,2 +1,2 @@
-export * from "./Input/Input";
-export * from "./ProtectedRoute/ProtectedRoute";
+export { default as Input } from "./Input/Input";
+export { default as ProtectedRoute } from "./ProtectedRoute/ProtectedRoute";

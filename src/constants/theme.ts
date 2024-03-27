@@ -1,11 +1,3 @@
-export enum ROUTES {
-  HOME = "/",
-  POSTS = "/app",
-  POST_DETAILS = "/post/id",
-}
-
-export const AUTH_LOCAL_STORAGE_KEY = "auth";
-
 export const theme = {
   black: "#393635",
   gray: "#686564",

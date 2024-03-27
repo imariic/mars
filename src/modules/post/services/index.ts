@@ -1,5 +1,5 @@
-import instance from "../../../api";
-import { Post } from "../../../interfaces";
+import instance from "api";
+import { Post } from "interfaces";
 
 export const getPosts = async (): Promise<Post[]> => {
   const postsResponse = await instance.get("/posts");

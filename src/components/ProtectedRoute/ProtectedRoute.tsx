@@ -1,13 +1,14 @@
 import React, { PropsWithChildren } from "react";
 import { Navigate } from "react-router-dom";
-import { AUTH_LOCAL_STORAGE_KEY, ROUTES } from "../../constants";
-import useLocalStorage from "../../hooks";
+import useLocalStorage from "hooks";
+import { AUTH_LOCAL_STORAGE_KEY } from "constants/strings";
+import { AppRoutes } from "constants/enums";
 
 const ProtectedRoute: React.FC<PropsWithChildren> = ({ children }) => {
   const [isLoggedIn] = useLocalStorage(AUTH_LOCAL_STORAGE_KEY, false);
 
   if (!isLoggedIn) {
-    return <Navigate to={ROUTES.HOME} />;
+    return <Navigate to={AppRoutes.HOME} />;
   }
 
   return <>{children}</>;

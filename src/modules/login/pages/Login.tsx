@@ -1,4 +1,4 @@
-import LoginForm from "../components/LoginForm/LoginForm";
+import { LoginForm } from "modules/login/components";
 import { Container } from "./Login.styles";
 
 const Login = () => {

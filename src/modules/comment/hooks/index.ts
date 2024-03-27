@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { Comment } from "../../../interfaces";
-import { getComments } from "../services";
+import { Comment } from "interfaces";
+import { getComments } from "modules/comment";
 
 export const useComments = (postId: number) => {
   const [comments, setComments] = useState<Comment[]>([]);

@@ -1,14 +1,15 @@
 import { useState } from "react";
-import Input from "../../../../components/Input/Input";
 import { useNavigate } from "react-router-dom";
-import useLocalStorage from "../../../../hooks";
-import { AUTH_LOCAL_STORAGE_KEY, ROUTES } from "../../../../constants";
 import {
   Container,
   ErrorMessage,
   SubmitButton,
   Title,
 } from "./LoginForm.styles";
+import useLocalStorage from "hooks";
+import { Input } from "components";
+import { AUTH_LOCAL_STORAGE_KEY } from "constants/strings";
+import { AppRoutes } from "constants/enums";
 
 const LoginForm = () => {
   const [email, setEmail] = useState("");
@@ -26,7 +27,7 @@ const LoginForm = () => {
     if (!isValid) return;
 
     await login(true);
-    navigate(ROUTES.POSTS);
+    navigate(AppRoutes.POSTS);
   };
 
   const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
