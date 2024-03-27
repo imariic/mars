@@ -1,6 +1,6 @@
 import React, { PropsWithChildren } from "react";
 import { Navigate } from "react-router-dom";
-import useLocalStorage from "hooks";
+import { useLocalStorage } from "hooks";
 import { AUTH_LOCAL_STORAGE_KEY } from "constants/strings";
 import { AppRoutes } from "constants/enums";
 

@@ -9,17 +9,15 @@ interface PostItemProps {
 }
 
 const PostItem: React.FC<PostItemProps> = ({ post }) => {
-  const users = useContext(UserContext);
-  const [comments] = useComments(post.id);
-
-  const user = users.find((user) => user.id === post.id);
+  const { id, title, name } = post;
+  const [comments] = useComments(id);
 
   return (
     <Container>
       <Title>
-        Title: {post.title} #{post.id}
+        Title: {title} #{id}
       </Title>
-      <Name>User's name: {user?.name}</Name>
+      <Name>User's name: {name}</Name>
       <Comments>Comments:</Comments>
       <ul>
         {comments.map((item) => (

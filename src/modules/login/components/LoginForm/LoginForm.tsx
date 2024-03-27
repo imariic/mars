@@ -6,7 +6,7 @@ import {
   SubmitButton,
   Title,
 } from "./LoginForm.styles";
-import useLocalStorage from "hooks";
+import { useLocalStorage } from "hooks";
 import { Input } from "components";
 import { AUTH_LOCAL_STORAGE_KEY } from "constants/strings";
 import { AppRoutes } from "constants/enums";

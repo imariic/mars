@@ -1,8 +1,16 @@
+import { Input } from "components";
 import styled from "styled-components";
 
 export const Container = styled.main`
-  position: relative;
-  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+export const Search = styled(Input)`
+  width: 250px;
+  height: 50px;
+  font-size: 32px;
 `;
 
 export const PostsContainer = styled.section`
@@ -14,11 +22,8 @@ export const PostsContainer = styled.section`
 `;
 
 export const LoadMoreButton = styled.button`
-  position: relative;
   width: 200px;
   height: 50px;
-  left: 50%;
-  transform: translateX(-50%);
   margin-top: 24px;
   background-color: ${({ theme }) => theme.lighterOrange};
 `;

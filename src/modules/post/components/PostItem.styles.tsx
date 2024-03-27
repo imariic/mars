@@ -6,6 +6,10 @@ export const Container = styled.div`
   height: 500px;
   border: 1px solid black;
   padding: 14px;
+
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 export const Title = styled.h3`

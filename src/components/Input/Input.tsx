@@ -5,7 +5,9 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   label: string;
 }
 
-const Input: React.FC<InputProps> = ({ value, onChange, label, type }) => {
+const Input: React.FC<InputProps> = (props) => {
+  const { value, onChange, label, type } = props;
+
   return (
     <InputContainer
       placeholder={label}
@@ -14,6 +16,7 @@ const Input: React.FC<InputProps> = ({ value, onChange, label, type }) => {
       value={value}
       onChange={onChange}
       type={type}
+      {...props}
     />
   );
 };
