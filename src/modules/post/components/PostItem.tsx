@@ -1,8 +1,7 @@
-import { useContext } from "react";
 import { Post } from "interfaces";
-import { UserContext } from "modules";
 import { useComments } from "modules/comment";
 import { Container, Title, Name, Comments } from "./PostItem.styles";
+import withDisplayName from "hoc";
 
 interface PostItemProps {
   post: Post;
@@ -21,11 +20,13 @@ const PostItem: React.FC<PostItemProps> = ({ post }) => {
       <Comments>Comments:</Comments>
       <ul>
         {comments.map((item) => (
-          <li>{item.name}</li>
+          <li key={item.name}>{item.name}</li>
         ))}
       </ul>
     </Container>
   );
 };
 
-export default PostItem;
+PostItem.displayName = "PostItem";
+
+export default withDisplayName(PostItem);

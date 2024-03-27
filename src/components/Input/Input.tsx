@@ -1,5 +1,6 @@
 import React, { InputHTMLAttributes } from "react";
 import { InputContainer } from "./Input.styles";
+import withDisplayName from "hoc";
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   label: string;
@@ -21,4 +22,6 @@ const Input: React.FC<InputProps> = (props) => {
   );
 };
 
-export default Input;
+Input.displayName = "Input";
+
+export default withDisplayName(Input);

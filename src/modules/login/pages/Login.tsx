@@ -1,7 +1,8 @@
 import { LoginForm } from "modules/login/components";
 import { Container } from "./Login.styles";
+import withDisplayName from "hoc";
 
-const Login = () => {
+const Login: React.FC = () => {
   return (
     <Container>
       <LoginForm />
@@ -9,4 +10,6 @@ const Login = () => {
   );
 };
 
-export default Login;
+Login.displayName = "Login";
+
+export default withDisplayName(Login);

@@ -10,8 +10,9 @@ import { useLocalStorage } from "hooks";
 import { Input } from "components";
 import { AUTH_LOCAL_STORAGE_KEY } from "constants/strings";
 import { AppRoutes } from "constants/enums";
+import withDisplayName from "hoc";
 
-const LoginForm = () => {
+const LoginForm: React.FC = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(false);
@@ -49,4 +50,6 @@ const LoginForm = () => {
   );
 };
 
-export default LoginForm;
+LoginForm.displayName = "LoginForm";
+
+export default withDisplayName(LoginForm);

@@ -9,8 +9,9 @@ import {
 import { useState } from "react";
 import { useDebounce } from "hooks";
 import { filterPosts } from "modules/post/helpers";
+import withDisplayName from "hoc";
 
-const Posts = () => {
+const Posts: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [posts, setPage] = usePosts();
 
@@ -31,7 +32,7 @@ const Posts = () => {
       />
       <PostsContainer>
         {filteredPosts?.map((item) => (
-          <PostItem post={item} />
+          <PostItem key={item.id} post={item} />
         ))}
       </PostsContainer>
       <LoadMoreButton onClick={() => setPage((page) => page + 1)}>
@@ -41,4 +42,6 @@ const Posts = () => {
   );
 };
 
-export default Posts;
+Posts.displayName = "Posts";
+
+export default withDisplayName(Posts);
