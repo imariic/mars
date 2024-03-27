@@ -1,8 +1,8 @@
 import { useContext } from "react";
-import { Container } from "./PostItem.styles";
 import { Post } from "interfaces";
 import { UserContext } from "modules";
 import { useComments } from "modules/comment";
+import { Container, Title, Name, Comments } from "./PostItem.styles";
 
 interface PostItemProps {
   post: Post;
@@ -16,11 +16,11 @@ const PostItem: React.FC<PostItemProps> = ({ post }) => {
 
   return (
     <Container>
-      <h3>
+      <Title>
         Title: {post.title} #{post.id}
-      </h3>
-      <h4>User's name:{user?.name}</h4>
-      <h5>Comments:</h5>
+      </Title>
+      <Name>User's name: {user?.name}</Name>
+      <Comments>Comments:</Comments>
       <ul>
         {comments.map((item) => (
           <li>{item.name}</li>
