@@ -26,6 +26,7 @@ const Posts: React.FC = () => {
   return (
     <Container>
       <Search
+        aria-label="search-posts"
         label="Search posts"
         onChange={handleSearch}
         value={searchQuery}

@@ -21,7 +21,7 @@ export const usePosts = (): [
 
   useEffect(() => {
     getPosts().then((posts) => {
-      const postsWithUser = posts.map((post) => {
+      const postsWithUser = posts?.map((post) => {
         const user = users.find((user) => user.id === post.userId);
 
         return {
@@ -29,7 +29,6 @@ export const usePosts = (): [
           name: user?.name,
         };
       });
-
       setPosts(postsWithUser);
     });
   }, [users]);
