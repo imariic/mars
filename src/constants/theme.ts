@@ -11,11 +11,11 @@ export const theme = {
   },
 
   dimensions: {
-    xsmall: "0.25rem",
-    small: "0.5rem",
-    medium: "1rem",
+    xsmall: "0.875rem",
+    small: "1rem",
+    medium: "1.25rem",
     xmedium: "1.5rem",
-    large: "2rem",
-    xlarge: "2.5rem",
+    large: "1.875rem",
+    xlarge: "2rem",
   },
 };

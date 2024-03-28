@@ -1,6 +1,6 @@
+import { useLocation } from "react-router-dom";
 import withDisplayName from "hoc";
 import PostItem from "modules/post/components/PostItem";
-import { useLocation } from "react-router-dom";
 
 const PostDetails: React.FC = () => {
   const location = useLocation();

@@ -1,8 +1,8 @@
+import { useNavigate } from "react-router-dom";
+import withDisplayName from "hoc";
 import { Post } from "interfaces";
 import { useComments } from "modules/comment";
 import { Container, Title, Name, Comments } from "./PostItem.styles";
-import withDisplayName from "hoc";
-import { useNavigate } from "react-router-dom";
 
 interface PostItemProps {
   post: Post;

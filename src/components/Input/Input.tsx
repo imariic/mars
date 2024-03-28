@@ -1,6 +1,6 @@
 import React, { InputHTMLAttributes } from "react";
-import { InputContainer } from "./Input.styles";
 import withDisplayName from "hoc";
+import { InputContainer } from "./Input.styles";
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   label: string;

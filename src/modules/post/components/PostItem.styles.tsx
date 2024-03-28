@@ -6,6 +6,7 @@ export const Container = styled.article`
   height: 500px;
   border: 1px solid black;
   padding: ${({ theme }) => theme.dimensions.medium};
+  font-size: ${({ theme }) => theme.dimensions.large};
 
   &:hover {
     cursor: pointer;

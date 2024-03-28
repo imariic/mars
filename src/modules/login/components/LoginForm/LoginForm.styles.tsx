@@ -8,6 +8,7 @@ export const Container = styled.form`
   flex-direction: column;
   align-items: center;
   background-color: ${({ theme }) => theme.white};
+  font-size: ${({ theme }) => theme.dimensions.medium};
 `;
 
 export const Title = styled.h1`
