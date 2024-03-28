@@ -23,11 +23,7 @@ const renderComponent = () =>
 
 describe("LoginPage", () => {
   it("LoginPage renders correctly", () => {
-    renderComponent();
-
-    const login = screen.getByText("Login");
-
-    expect(login).toBeInTheDocument();
+    expect(renderComponent()).toMatchSnapshot();
   });
 
   it("Checks login functionality with correct credentials", async () => {

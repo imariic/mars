@@ -1,0 +1,140 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoginPage LoginPage renders correctly 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <main
+        class="sc-jTQCzO ggivrb"
+      >
+        <form
+          class="sc-guDLey ezlZhe"
+          method="POST"
+        >
+          <h1
+            class="sc-dmyCSP edqSwp"
+          >
+            Login
+          </h1>
+          <input
+            class="sc-beySPh gQutrJ"
+            id="email"
+            label="email"
+            name="email"
+            placeholder="email"
+            type="email"
+          />
+          <input
+            class="sc-beySPh gQutrJ"
+            id="password"
+            label="password"
+            name="password"
+            placeholder="password"
+            type="password"
+          />
+          <input
+            aria-label="submit-button"
+            class="sc-hLQSwg jQSmTT"
+            type="submit"
+          />
+          <p
+            class="sc-eDLKkx hTbvMA"
+          />
+        </form>
+      </main>
+    </div>
+  </body>,
+  "container": <div>
+    <main
+      class="sc-jTQCzO ggivrb"
+    >
+      <form
+        class="sc-guDLey ezlZhe"
+        method="POST"
+      >
+        <h1
+          class="sc-dmyCSP edqSwp"
+        >
+          Login
+        </h1>
+        <input
+          class="sc-beySPh gQutrJ"
+          id="email"
+          label="email"
+          name="email"
+          placeholder="email"
+          type="email"
+        />
+        <input
+          class="sc-beySPh gQutrJ"
+          id="password"
+          label="password"
+          name="password"
+          placeholder="password"
+          type="password"
+        />
+        <input
+          aria-label="submit-button"
+          class="sc-hLQSwg jQSmTT"
+          type="submit"
+        />
+        <p
+          class="sc-eDLKkx hTbvMA"
+        />
+      </form>
+    </main>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

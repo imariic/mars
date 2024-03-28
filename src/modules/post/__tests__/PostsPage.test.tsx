@@ -37,10 +37,7 @@ describe("PostsPage", () => {
   afterAll(() => server.close());
 
   it("PostsPage renders correctly", () => {
-    renderComponent();
-
-    const loadMore = screen.getByText("Load more");
-    expect(loadMore).toBeInTheDocument();
+    expect(renderComponent()).toMatchSnapshot();
   });
 
   it("PostsPage renders posts", async () => {
