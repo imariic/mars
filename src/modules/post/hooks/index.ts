@@ -20,17 +20,19 @@ export const usePosts = (): [
   const [page, setPage] = useState(1);
 
   useEffect(() => {
-    getPosts().then((posts) => {
-      const postsWithUser = posts?.map((post) => {
-        const user = users.find((user) => user.id === post.userId);
+    getPosts()
+      .then((posts) => {
+        const postsWithUser = posts?.map((post) => {
+          const user = users.find((user) => user.id === post.userId);
 
-        return {
-          ...post,
-          name: user?.name,
-        };
-      });
-      setPosts(postsWithUser);
-    });
+          return {
+            ...post,
+            name: user?.name,
+          };
+        });
+        setPosts(postsWithUser);
+      })
+      .catch((e) => console.error("Error", e));
   }, [users]);
 
   const slicedPosts = posts?.slice(0, limit * page);

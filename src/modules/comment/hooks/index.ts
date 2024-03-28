@@ -6,7 +6,9 @@ export const useComments = (postId: number) => {
   const [comments, setComments] = useState<Comment[]>([]);
 
   useEffect(() => {
-    getComments(postId).then((comments) => setComments(comments));
+    getComments(postId)
+      .then((comments) => setComments(comments))
+      .catch((e) => console.error("Error", e));
   }, [postId]);
 
   return [comments];
