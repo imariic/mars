@@ -78,9 +78,9 @@ describe("PostsPage", () => {
     renderComponent();
     const button = screen.getByText("Load more");
 
-    fireEvent.click(button);
-
     await waitFor(() => {
+      expect(screen.getAllByText(/Comments/i)).toHaveLength(10);
+      fireEvent.click(button);
       expect(screen.getAllByText(/Comments/i)).toHaveLength(20);
     });
   });
