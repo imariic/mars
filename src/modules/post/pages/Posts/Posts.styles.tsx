@@ -11,7 +11,7 @@ export const Search = styled(Input)`
   position: fixed;
   width: 250px;
   height: 50px;
-  font-size: 32px;
+  font-size: ${({ theme }) => theme.dimensions.large};
 `;
 
 export const PostsContainer = styled.section`
@@ -26,6 +26,6 @@ export const PostsContainer = styled.section`
 export const LoadMoreButton = styled.button`
   width: 200px;
   height: 50px;
-  margin-top: 24px;
-  background-color: ${({ theme }) => theme.lighterOrange};
+  margin-top: ${({ theme }) => theme.dimensions.medium};
+  background-color: ${({ theme }) => theme.colors.lighterOrange};
 `;

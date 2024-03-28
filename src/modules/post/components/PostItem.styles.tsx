@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
 export const Container = styled.article`
-  background-color: ${({ theme }) => theme.black};
+  background-color: ${({ theme }) => theme.colors.black};
   width: 400px;
   height: 500px;
   border: 1px solid black;
-  padding: 14px;
+  padding: ${({ theme }) => theme.dimensions.medium};
 
   &:hover {
     cursor: pointer;
@@ -13,13 +13,13 @@ export const Container = styled.article`
 `;
 
 export const Title = styled.h3`
-  color: ${({ theme }) => theme.white};
+  color: ${({ theme }) => theme.colors.white};
 `;
 
 export const Name = styled.h4`
-  color: ${({ theme }) => theme.orange};
+  color: ${({ theme }) => theme.colors.orange};
 `;
 
 export const Comments = styled.h5`
-  color: ${({ theme }) => theme.lightOrange};
+  color: ${({ theme }) => theme.colors.lightOrange};
 `;

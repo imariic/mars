@@ -18,7 +18,7 @@ const renderComponent = () =>
   );
 
 describe("LoginPage", () => {
-  it("PostsPage renders correctly", () => {
+  it("LoginPage renders correctly", () => {
     renderComponent();
 
     const login = screen.getByText("Login");
