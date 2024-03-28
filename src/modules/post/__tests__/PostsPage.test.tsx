@@ -1,9 +1,11 @@
 import { render, screen, waitFor, fireEvent } from "@testing-library/react";
+import { ThemeProvider } from "styled-components";
 import { setupServer } from "msw/node";
 import { rest } from "msw";
+import { theme } from "constants/theme";
+import { UserProvider } from "modules/user";
 import { posts } from "modules/post/fixtures";
 import Posts from "../pages/Posts/Posts";
-import { UserProvider } from "modules/user";
 
 const mockedUsedNavigate = jest.fn();
 
@@ -22,9 +24,11 @@ const server = setupServer(...handlers);
 
 const renderComponent = () =>
   render(
-    <UserProvider>
-      <Posts />
-    </UserProvider>
+    <ThemeProvider theme={theme}>
+      <UserProvider>
+        <Posts />
+      </UserProvider>
+    </ThemeProvider>
   );
 
 describe("PostsPage", () => {
@@ -44,7 +48,9 @@ describe("PostsPage", () => {
 
     await waitFor(() => {
       expect(
-        screen.getByText("User's name: Leanne Graham")
+        screen.getByText(
+          "Title: sunt aut facere repellat provident occaecati excepturi optio reprehenderit #1"
+        )
       ).toBeInTheDocument();
     });
   });
@@ -53,16 +59,29 @@ describe("PostsPage", () => {
     renderComponent();
 
     const search = screen.getByLabelText("search-posts");
+    const button = screen.getByText("Load more");
 
+    fireEvent.click(button);
     fireEvent.change(search, { target: { value: "Ervin" } });
 
     await waitFor(() => {
       expect(search).toHaveValue("Ervin");
 
-      expect(screen.getByText("User's name: Ervin Howell")).toBeInTheDocument();
+      expect(screen.getAllByText("User's name: Ervin Howell")).toHaveLength(10);
       expect(
         screen.queryByText("User's name: Leanne Graham")
       ).not.toBeInTheDocument();
+    });
+  });
+
+  it("PostsPage load more", async () => {
+    renderComponent();
+    const button = screen.getByText("Load more");
+
+    fireEvent.click(button);
+
+    await waitFor(() => {
+      expect(screen.getAllByText(/Comments/i)).toHaveLength(20);
     });
   });
 });

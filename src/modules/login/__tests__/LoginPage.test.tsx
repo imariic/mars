@@ -1,7 +1,9 @@
 import { render, screen, waitFor, fireEvent } from "@testing-library/react";
 import { AppRoutes } from "constants/enums";
+import { theme } from "constants/theme";
 import { LoginPage } from "modules/login";
 import { UserProvider } from "modules/user";
+import { ThemeProvider } from "styled-components";
 
 const mockedUsedNavigate = jest.fn();
 
@@ -12,9 +14,11 @@ jest.mock("react-router-dom", () => ({
 
 const renderComponent = () =>
   render(
-    <UserProvider>
-      <LoginPage />
-    </UserProvider>
+    <ThemeProvider theme={theme}>
+      <UserProvider>
+        <LoginPage />
+      </UserProvider>
+    </ThemeProvider>
   );
 
 describe("LoginPage", () => {
